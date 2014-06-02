@@ -1,0 +1,205 @@
+{
+  "testType" : "RANDOM",
+  "description" : "Example random test with special country behavior",
+  "version" : -1,
+  "constants" : {
+    "SOUTH_AMERICA" : [ "BR", "AR", "CO", "PE", "VE", "CL" ]
+  },
+  "specialConstants" : {
+  },
+  "rule" : null,
+  "salt" : "footst",
+  "buckets" : [ {
+    "name" : "inactive",
+    "value" : -1,
+    "description" : "inactive"
+  }, {
+    "name" : "control",
+    "value" : 0,
+    "description" : "no special behavior"
+  }, {
+    "name" : "apricot",
+    "value" : 1,
+    "description" : "fruit"
+  }, {
+    "name" : "banana",
+    "value" : 2,
+    "description" : "fruit"
+  }, {
+    "name" : "cherry",
+    "value" : 3,
+    "description" : "fruit"
+  }, {
+    "name" : "durian",
+    "value" : 4,
+    "description" : "fruit"
+  }, {
+    "name" : "elderberry",
+    "value" : 5,
+    "description" : "fruit"
+  }, {
+    "name" : "fig",
+    "value" : 6,
+    "description" : "fruit"
+  }, {
+    "name" : "grape",
+    "value" : 7,
+    "description" : "fruit"
+  }, {
+    "name" : "honeydew",
+    "value" : 8,
+    "description" : "fruit"
+  }, {
+    "name" : "itapalm",
+    "value" : 9,
+    "description" : "fruit"
+  }, {
+    "name" : "jujube",
+    "value" : 10,
+    "description" : "fruit"
+  }, {
+    "name" : "kumquat",
+    "value" : 11,
+    "description" : "fruit"
+  }, {
+    "name" : "lemon",
+    "value" : 12,
+    "description" : "fruit"
+  }, {
+    "name" : "mango",
+    "value" : 13,
+    "description" : "fruit"
+  }, {
+    "name" : "nectarine",
+    "value" : 14,
+    "description" : "fruit"
+  }, {
+    "name" : "orange",
+    "value" : 15,
+    "description" : "fruit"
+  }, {
+    "name" : "peach",
+    "value" : 16,
+    "description" : "fruit"
+  }, {
+    "name" : "quince",
+    "value" : 17,
+    "description" : "fruit"
+  }, {
+    "name" : "raspberry",
+    "value" : 18,
+    "description" : "fruit"
+  }, {
+    "name" : "strawberry",
+    "value" : 19,
+    "description" : "fruit"
+  }, {
+    "name" : "tangerine",
+    "value" : 20,
+    "description" : "fruit"
+  }, {
+    "name" : "uglifruit",
+    "value" : 21,
+    "description" : "fruit"
+  } ],
+  "allocations" : [ {
+    "rule" : "${proctor:contains(SOUTH_AMERICA, country)}",
+    "ranges" : [ {
+      "length" : 0.88,
+      "bucketValue" : -1
+    }, {
+      "length" : 0.03,
+      "bucketValue" : 9
+    }, {
+      "length" : 0.03,
+      "bucketValue" : 4
+    }, {
+      "length" : 0.03,
+      "bucketValue" : 5
+    }, {
+      "length" : 0.03,
+      "bucketValue" : 8
+    } ]
+  }, {
+    "rule" : "${country == 'IN'}",
+    "ranges" : [ {
+      "length" : 0.94,
+      "bucketValue" : -1
+    }, {
+      "length" : 0.03,
+      "bucketValue" : 1
+    }, {
+      "length" : 0.03,
+      "bucketValue" : 2
+    } ]
+  }, {
+    "rule" : null,
+    "ranges" : [ {
+      "length" : 1.0,
+      "bucketValue" : -1
+    }, {
+      "length" : 0.0,
+      "bucketValue" : 0
+    }, {
+      "length" : 0.0,
+      "bucketValue" : 1
+    }, {
+      "length" : 0.0,
+      "bucketValue" : 2
+    }, {
+      "length" : 0.0,
+      "bucketValue" : 3
+    }, {
+      "length" : 0.0,
+      "bucketValue" : 4
+    }, {
+      "length" : 0.0,
+      "bucketValue" : 5
+    }, {
+      "length" : 0.0,
+      "bucketValue" : 6
+    }, {
+      "length" : 0.0,
+      "bucketValue" : 7
+    }, {
+      "length" : 0.0,
+      "bucketValue" : 8
+    }, {
+      "length" : 0.0,
+      "bucketValue" : 9
+    }, {
+      "length" : 0.0,
+      "bucketValue" : 10
+    }, {
+      "length" : 0.0,
+      "bucketValue" : 11
+    }, {
+      "length" : 0.0,
+      "bucketValue" : 12
+    }, {
+      "length" : 0.0,
+      "bucketValue" : 13
+    }, {
+      "length" : 0.0,
+      "bucketValue" : 14
+    }, {
+      "length" : 0.0,
+      "bucketValue" : 15
+    }, {
+      "length" : 0.0,
+      "bucketValue" : 16
+    }, {
+      "length" : 0.0,
+      "bucketValue" : 17
+    }, {
+      "length" : 0.0,
+      "bucketValue" : 18
+    }, {
+      "length" : 0.0,
+      "bucketValue" : 19
+    }, {
+      "length" : 0.0,
+      "bucketValue" : 20
+    } ]
+  } ]
+}

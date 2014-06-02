@@ -1,0 +1,45 @@
+{
+  "version" : 1,
+  "testType" : "USER",
+  "description" : "Example user test",
+  "salt" : "exampletst",
+  "constants" : {
+  },
+  "specialConstants" : {
+  },
+  "subrule": "lang == 'en' && country == 'US'",
+  "buckets" : [ {
+      "name" : "inactive",
+      "value" : -1,
+      "description" : ""
+  }, {
+    "name" : "control",
+    "value" : 0,
+    "description" : ""
+  }, {
+    "name" : "test1",
+    "value" : 1,
+    "description" : "Test 1"
+  }, {
+    "name" : "test2",
+    "value" : 2,
+    "description" : "Test 2"
+  }],
+  "allocations" : [ {
+    "ranges" : [ {
+      "length" : 1.0,
+      "bucketValue" : -1
+    }, {
+      "length" : 0.0,
+      // intentionally added out of order so that the new users would come from the former 'inactive' group and not rearrange
+      //  the other splits
+      "bucketValue" : 2
+    }, {
+      "length" : 0.0,
+      "bucketValue" : 0
+    }, {
+      "length" : 0.0,
+      "bucketValue" : 1
+    }]
+  }]
+}

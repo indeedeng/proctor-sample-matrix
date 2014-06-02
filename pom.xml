@@ -1,0 +1,29 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.indeed</groupId>
+  <artifactId>proctor-sample-matrix</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>proctor-sample-matrix</name>
+  <url>http://maven.apache.org</url>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.indeed</groupId>
+        <artifactId>proctor-maven-plugin</artifactId>
+        <version>1.0.6</version>
+        <executions>
+          <execution>
+            <id>proctor-build</id>
+            <goals>
+              <goal>generate-matrix</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+    <!-- compile is included in the default to get the target/ directory created #hack -->
+    <defaultGoal>compile com.indeed:proctor-maven-plugin:generate-matrix</defaultGoal>
+  </build>
+</project>

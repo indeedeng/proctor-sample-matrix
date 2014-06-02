@@ -1,0 +1,46 @@
+{
+  "testType" : "USER",
+  "description" : "Sample user-based test",
+  "version" : -1,
+  "constants" : {
+  },
+  "specialConstants" : {
+  },
+  "rule" : null,
+  "salt" : "bartst",
+  "buckets" : [ {
+    "name" : "Unlogged",
+    "value" : -1,
+    "description" : ""
+  }, {
+    "name" : "Control",
+    "value" : 0,
+    "description" : "Same old behavior"
+  }, {
+    "name" : "Test",
+    "value" : 1,
+    "description" : "New hotness"
+  } ],
+  "allocations" : [ {
+    "rule" : "${(country == 'US')}",
+    "ranges" : [ {
+      "length" : 0.0,
+      "bucketValue" : -1
+    }, {
+      "length" : 0.0,
+      "bucketValue" : 0
+    }, {
+      "length" : 1.0,
+      "bucketValue" : 1
+    } ]
+  }, {
+    "rule" : null,
+    "ranges" : [ {
+      "length" : 0.5,
+      "bucketValue" : 0
+    }, {
+      "length" : 0.5,
+      "bucketValue" : 1
+    } ]
+  } ]
+}
